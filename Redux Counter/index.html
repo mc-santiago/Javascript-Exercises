@@ -4,19 +4,26 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <title>Counter Redux</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+   <!-- CSS  -->
+   <link rel="stylesheet" href="styles.css">
    <!-- Redux CDN -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.min.js"></script>
 </head>
 <body>
-   <!-- Render the store -->
-   <p id="render-store"></p>
-   <button id="remove10">-10</button>
-   <button id="remove1">-1</button>
-   <button id="reset">reset</button>
-   <button id="add1">+1</button>
-   <button id="add10">+10</button>
-   
+    <section class="counterSection">
+        <h1>Counter</h1>
+        <!-- Render the store -->
+        <div class="counter">
+            <button id="remove10">-10</button>
+            <button id="remove1">-1</button>
+            <p id="render-store"></p>
+            <button id="add1">+1</button>
+            <button id="add10">+10</button>  
+        </div>
+        <br/>
+        <button id="reset">reset</button>
+    </section>
+   <!-- Javascript -->
    <script src="main.js"></script>
 </body>
 </html>

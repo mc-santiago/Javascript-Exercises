@@ -1,5 +1,5 @@
 fontSize=16
-explode =💥
+// explode =💥
 
 document.onkeydown = checkKey;
 
@@ -17,10 +17,13 @@ function checkKey(e) {
         fontSize -= 2
         document.getElementById('balloon').style.fontSize = fontSize
     }
-    else if () {
-        console.log("onclick explode");// down arrow
-        document.getElementById('balloon').innerHTML = explode   
+    // else if () {
+    //     console.log("onclick explode");// down arrow
+    //     document.getElementById('balloon').innerHTML = explode   
     }
     
-console.log(fontSize)
+// console.log(fontSize)
+// ballon.addEventListener('click', event => {
+//     document.getElementById('balloon').innerHTML = '💥'
+})
 }
