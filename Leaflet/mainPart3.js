@@ -4,10 +4,10 @@ let options = {attributionControl: false}
 let map = L.map('container', options)
 
 // Fondo al mapa... http://leaflet-extras.github.io/leaflet-providers/preview/index.html
-let tileLayer = L.tileLayer('https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png', {
-	maxZoom: 19,
-	attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> | Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo (map);
+let tileLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+	maxZoom: 16
+}).addTo (map)
 
 // Centralizar el mapa a la Península Ibérica
 map.setView(new L.LatLng(40.416775, -3.703790), 12)
@@ -66,14 +66,7 @@ function drawMarkers(data){
 
             let marker = L.marker([event.location.latitude, event.location.longitude], options)
             marker.bindPopup(event.title)
-            marker.on('mouseover', function (e) {
-                this.openPopup();
-            });
-            marker.on('mouseout', function (e) {
-                this.closePopup();
-            });
             marker.addTo(map)
         }
     })
 }
-
