@@ -68,6 +68,7 @@ function drawMarkers(data){
             marker.bindPopup(event.title)
             marker.on('mouseover', function (e) {
                 this.openPopup();
+                
             });
             marker.on('mouseout', function (e) {
                 this.closePopup();

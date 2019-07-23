@@ -23,6 +23,11 @@ Pista: campo @type
 
 1. Los popups deben aparecer al hacer hover
 
+## Part 5
+
+1. Al pulsar un marker, crea una tarjeta que muestre la información del evento.
+
+
 ## Ruta tileLayers
 
 http://leaflet-extras.github.io/leaflet-providers/preview/index.html
